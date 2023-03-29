@@ -7,10 +7,10 @@
     <body>
         <div class="container-fluid">
 
-            <?= navbar_text('Persistência de dados em disco: arquivo!') ?>
+            <?= navbar_text('Persistência de dados em disco: criação de arquivos!') ?>
 
             <div class="col-md-6 col-sm-9 mx-auto">
-                <form method="POST" class="text-center border border-light p-5" action="display.php">
+                <form method="POST" class="text-center border border-light p-5" action="gravador.php">
 
                     <p class="h4 mb-4">Cadastre-se!</p>
 
