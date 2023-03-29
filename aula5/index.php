@@ -35,7 +35,7 @@
                         Telefone com DDD
                     </small>
 
-                    <input type="file" name="file-upload" id="file-upload" class="form-control">
+                    <input type="file" name="foto-perfil" id="foto-perfil" class="form-control">
 
                     <button class="btn btn-info my-4 btn-block" type="submit">Enviar</button>
                 </form>
