@@ -1,5 +1,5 @@
 <?php
-include '../lib/file_handler.php'
+include '../lib/file_handler.php';
 // print_r($_POST);
 // echo '<br><br>';
 // print_r($_FILES);
@@ -18,7 +18,7 @@ include '../lib/file_handler.php'
  move_uploaded_files() move o arquivo indicado e salva arquivo no local indicado no segundo parametro
 */
 
-$filename = "foto-perfil";
+$filename = 'foto-perfil';
 $prefix = date("ymdhis");
 $root = $_SERVER['DOCUMENT_ROOT'];
 $dir = $root.'/code/assets/img/'; // ALTERAR PARA O DIRETORIO DESEJADO!
@@ -29,7 +29,7 @@ if (isset($_FILES[$filename])) {
     $file = $dir.$prefix.'_'.$_FILES['foto-perfil']['name'];
 
     // verificar se o arquivo tem a extensão esperada 
-    k *= correctFileType($file);
+    $k *= correctFileType($file);
 
     //  verificar se o arquivo respeita os limites da aplicação
     $k *= allowedFileSize($filename);
@@ -85,5 +85,6 @@ if (isset($_FILES[$filename])) {
 $v = scandir($dir);
 
 foreach ($v as $key => $value) {
-    echo '<a href="'.$dir.$value'" class="btn btn-success">Download</a>'.$value.'<br>';
+    // echo '<a href="'.$dir.$value'" class="btn btn-success">Download</a>'.$value.'<br>';
+    echo 'btn download n finalizado';
 }
