@@ -3,7 +3,8 @@
     error_reporting(E_ALL);
 
     $nome = 'jorge';
-    $idade = 20;
+    // $idade = 20;
+    $idade = 'erro';
     $email = 'jorge@email.com';
 
     try {
@@ -18,8 +19,18 @@
             "idade" => $idade,
             "email" => $email,
         ));
+
+        echo "usuario criado com sucesso";
     } catch (PDOException $e) {
-        $e->error_log();
+        echo $e->getMessage();
+    } finally {
+        echo "<br><br>";
+        echo "Erro ao criar usuario";
+        
     }
 
+    function newException($error)
+    {
+
+    }
 ?>
