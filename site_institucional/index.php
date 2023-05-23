@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Material Design Bootstrap Template</title>
+    <title>HealthTrackr</title>
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
@@ -15,6 +15,8 @@
 
     <!-- Material Design Bootstrap -->
     <link href="assets/mdb/css/mdb.min.css" rel="stylesheet">
+
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 
 
     <style>
@@ -90,6 +92,7 @@
 
 <body>
     <?php include ('layouts/header.php'); ?>
+    <?php include ('home/index.php'); ?>
     <?php include ('layouts/footer.php'); ?>
 
     <!--  SCRIPTS  -->
