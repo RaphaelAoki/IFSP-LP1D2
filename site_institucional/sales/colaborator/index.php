@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
-    include ('config.php');
+    session_start();
+    include('../../config.php');
 ?>
 <head>
     <!-- Required meta tags always come first -->
@@ -19,7 +20,9 @@
     <!-- Material Design Bootstrap -->
     <link href="<?php echo BASE_URL . 'assets/mdb/css/mdb.min.css'; ?>" rel="stylesheet">
 
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+
+    <!-- <link rel="icon" type="image/x-icon" href="../images/favicon.ico"> -->
+    <!-- <link rel="icon" type="image/x-icon" href="<?php /* echo BASE_URL . 'images/teste.JPG'; */?>"> -->
 
 
     <style>
@@ -28,7 +31,7 @@
             body,
             header,
             .jarallax {
-                height: 700px;
+                height: 25px;
             }
 
             @media (max-width: 740px) {
@@ -94,22 +97,23 @@
 </head>
 
 <body>
-    <?php include ('layouts/header.php'); ?>
-    <?php include ('home/index.php'); ?>
-    <?php include ('layouts/footer.php'); ?>
-
+    <?php 
+        include ('../../layouts/header.php');
+        include ('../partials/dashboard-sales.php');
+    ?>
+    
     <!--  SCRIPTS  -->
     <!-- JQuery -->
-    <script typtext="javascript" src="assets/mdb/js/jquery.min.js"></script>
+    <script typtext="javascript" src="../assets/mdb/js/jquery.min.js"></script>
 
     <!-- Bootstrap tooltips -->
-    <script typtext="javascript" src="assets/mdb/js/popper.min.js"></script>
+    <script typtext="javascript" src="../assets/mdb/js/popper.min.js"></script>
 
     <!-- Bootstrap core JavaScript -->
-    <script typtext="javascript" src="assets/mdb/js/bootstrap.min.js"></script>
+    <script typtext="javascript" src="../assets/mdb/js/bootstrap.min.js"></script>
 
     <!-- MDB core JavaScript -->
-    <script typtext="javascript" src="assets/mdb/js/mdb.min.js"></script>
+    <script typtext="javascript" src="../assets/mdb/js/mdb.min.js"></script>
 
     <script>
         $(document).ready(() => {

@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<?php
+    session_start();
+    include('../config.php');
+?>
 <head>
     <!-- Required meta tags always come first -->
     <meta charset="utf-8">
@@ -10,11 +13,12 @@
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    
     <!-- Bootstrap core CSS -->
-    <link href="../assets/mdb/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo BASE_URL . 'assets/mdb/css/bootstrap.min.css'; ?>" rel="stylesheet">
 
     <!-- Material Design Bootstrap -->
-    <link href="../assets/mdb/css/mdb.min.css" rel="stylesheet">
+    <link href="<?php echo BASE_URL . 'assets/mdb/css/mdb.min.css'; ?>" rel="stylesheet">
 
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 
@@ -121,44 +125,49 @@
                 <div class="col-xl-5 col-lg-6 col-md-10 col-sm-12 mx-auto mt-lg-5">
 
                 <!--Form with header-->
-                <div class="card wow fadeIn" data-wow-delay="0.3s">
-                    <div class="card-body">
+                <form action="login.php" method="POST">
+                    <div class="card wow fadeIn" data-wow-delay="0.3s">
+                        <div class="card-body">
+    
+                        <!--Header-->
+                        <div class="form-header purple-gradient">
+                            <h3><i class="fas fa-user mt-2 mb-2"></i> Log in:</h3>
+                        </div>
 
-                    <!--Header-->
-                    <div class="form-header purple-gradient">
-                        <h3><i class="fas fa-user mt-2 mb-2"></i> Log in:</h3>
-                    </div>
-
-                    <!--Body-->
-                    <div class="md-form">
-                        <i class="fas fa-user prefix white-text"></i>
-                        <input type="text" id="orangeForm-name" class="form-control">
-                        <label for="orangeForm-name">Your name</label>
-                    </div>
-                    <div class="md-form">
-                        <i class="fas fa-envelope prefix white-text"></i>
-                        <input type="text" id="orangeForm-email" class="form-control">
-                        <label for="orangeForm-email">Your email</label>
-                    </div>
-
-                    <div class="md-form">
-                        <i class="fas fa-lock prefix white-text"></i>
-                        <input type="password" id="orangeForm-pass" class="form-control">
-                        <label for="orangeForm-pass">Your password</label>
-                    </div>
-
-                    <div class="text-center">
-                        <button class="btn purple-gradient btn-lg">Sign up</button>
-                        <hr>
-                        <div class="inline-ul text-center d-flex justify-content-center">
-                        <a class="p-2 m-2 fa-lg tw-ic"><i class="fab fa-twitter white-text"></i></a>
-                        <a class="p-2 m-2 fa-lg li-ic"><i class="fab fa-linkedin-in white-text"> </i></a>
-                        <a class="p-2 m-2 fa-lg ins-ic"><i class="fab fa-instagram white-text"> </i></a>
+                        <?php
+                            if (isset($_SESSION['error'])) {
+                                echo '<div class="text-danger text-center">'.$_SESSION['error'].'</div>';
+                            }
+                            session_destroy();
+                        ?>
+                        <div class="md-form">
+                            <i class="fas fa-envelope prefix white-text"></i>
+                            <input type="text" id="email" name="email" class="form-control">
+                            <label for="orangeForm-email">Your email</label>
+                        </div>
+    
+                        <div class="md-form">
+                            <i class="fas fa-lock prefix white-text"></i>
+                            <input type="password" id="password" name="password" class="form-control">
+                            <label for="orangeForm-pass">Your password</label>
+                        </div>
+    
+                        <div class="text-center">
+                            <button type="submit" class="btn purple-gradient btn-lg" style="width: 160px">Log in</button>
+                            <!-- <hr>
+                            <div class="inline-ul text-center d-flex justify-content-center">
+                            <a class="p-2 m-2 fa-lg tw-ic"><i class="fab fa-twitter white-text"></i></a>
+                            <a class="p-2 m-2 fa-lg li-ic"><i class="fab fa-linkedin-in white-text"> </i></a>
+                            <a class="p-2 m-2 fa-lg ins-ic"><i class="fab fa-instagram white-text"> </i></a>
+                            </div> -->
+                        </div>
+                        <div class="text-center">
+                            <a href="../sing-up" class="btn blue-gradient btn-lg" style="width: 160px">Sign up</a>
+                        </div>
+    
                         </div>
                     </div>
-
-                    </div>
-                </div>
+                </form>
                 <!--/Form with header-->
 
                 </div>
@@ -167,7 +176,7 @@
         </div>
         </section>
 
-        </header>
+    </header>
 
     <!--  SCRIPTS  -->
     <!-- JQuery -->
