@@ -14,8 +14,8 @@
                     <table class="table">
                         <thead>
                             <tr>
-                                <th scope="col">Vendedor</th>
-                                <th scope="col">Produto</th>
+                                <th scope="col">Nome</th>
+                                <th scope="col">Setor</th>
                                 <th scope="col">Quantidade</th>
                                 <th scope="col">Data</th>
                                 <th scope="col">#</th>
