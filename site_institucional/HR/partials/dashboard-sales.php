@@ -2,7 +2,7 @@
 <section class="text-center my-5 wow" data-wow-delay="0.3s">
 
     <!-- Section heading -->
-    <h2 class="h1-responsive font-weight-bold text-center my-5">Agende de RH</h2>
+    <h2 class="h1-responsive font-weight-bold text-center my-5">Agente de RH</h2>
 
     <!-- Grid row -->
     <div class="row mx-0">
