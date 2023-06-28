@@ -98,10 +98,11 @@
 
 <body>
     <?php 
+        include ('../sales.php');
         include ('../../layouts/header.php');
         include ('../partials/dashboard-admin.php');
     ?>
-    
+
     <!--  SCRIPTS  -->
     <!-- JQuery -->
     <script typtext="javascript" src="../assets/mdb/js/jquery.min.js"></script>
