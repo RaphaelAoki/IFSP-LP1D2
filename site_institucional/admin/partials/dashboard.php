@@ -14,8 +14,8 @@
             if( !is_null($value['menu']) ) {
                 echo '
                     <!-- Grid column -->
-                    <div class="col-lg-4 col-md-12 mb-lg-0 mb-4">
-                        <div class="card">
+                    <div class="col-lg-4 col-md-12 mb-lg-0">
+                        <div class="card mb-4">
                             <div class="card-body">
                                 <h5 class="mb-4">'.$value['menu'].'<sup>'.$value['menu_description'].'</sup></h5>
                                 <div class="d-flex justify-content-center mb-2">

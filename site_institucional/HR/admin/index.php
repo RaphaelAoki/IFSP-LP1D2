@@ -97,7 +97,8 @@
 </head>
 
 <body>
-    <?php 
+    <?php
+        include ('../humanResources.php');
         include ('../../layouts/header.php');
         include ('../partials/dashboard-admin.php');
     ?>
@@ -115,10 +116,27 @@
     <!-- MDB core JavaScript -->
     <script typtext="javascript" src="../assets/mdb/js/mdb.min.js"></script>
 
+    
     <script>
         $(document).ready(() => {
-        new WOW().init();
+            new WOW().init();
         });
+    </script>
+    
+    <script
+    src="https://code.jquery.com/jquery-3.7.0.js"
+    integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"></script>
+    
+    <script>
+
+        $('.edit').on('click', function(e) {
+            $('#modal-edit').show();
+        });
+        // abrir modal editar
+            // trazer dados do modal
+        // enviar e limpar modal editar
+
     </script>
 </body>
 

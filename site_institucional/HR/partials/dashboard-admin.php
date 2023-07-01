@@ -15,34 +15,29 @@
                         <thead>
                             <tr>
                                 <th scope="col">Nome</th>
-                                <th scope="col">Setor</th>
-                                <th scope="col">Quantidade</th>
-                                <th scope="col">Data</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Perfil</th>
                                 <th scope="col">#</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>Jhon Doe</td>
-                                <td>Licença premium</td>
-                                <td>2</td>
-                                <td>22/05/2023</td>
-                                <td>actions</td>
-                            </tr>
-                            <tr>
-                                <td>Jhon Doe</td>
-                                <td>Licença standard</td>
-                                <td>10</td>
-                                <td>22/05/2023</td>
-                                <td>actions</td>
-                            </tr>
-                            <tr>
-                                <td>Jhon Doe</td>
-                                <td>Licença premium</td>
-                                <td>4</td>
-                                <td>22/05/2023</td>
-                                <td>actions</td>
-                            </tr>
+                            <?php
+                                $users = show($pdo);
+                                if (isset($users)) {
+                                    foreach ($users as $item) {
+                                        echo '<tr>
+                                            <td>'. $item['name'] .'</td>
+                                            <td>'. $item['email'] .'</td>
+                                            <td>'. $item['profile'] .'</td>
+                                            <td>
+                                                <!-- Button trigger modal -->
+                                                <button type="button" class="btn btn-primary edit"><i class=""></i></button>
+                                            
+                                            </td>
+                                        </tr>';
+                                    }
+                                }
+                            ?>
                         </tbody>
                     </table>
                 </div>
@@ -53,3 +48,24 @@
 
 </section>
 <!-- Section: Pricing v.3 -->
+
+<!-- Modal -->
+<div class="modal fade" id="modal-edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>

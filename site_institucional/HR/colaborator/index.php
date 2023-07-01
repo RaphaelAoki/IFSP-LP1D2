@@ -97,7 +97,8 @@
 </head>
 
 <body>
-    <?php 
+    <?php
+        include ('../humanResources.php');
         include ('../../layouts/header.php');
         include ('../partials/dashboard-sales.php');
     ?>

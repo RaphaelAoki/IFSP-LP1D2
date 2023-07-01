@@ -14,31 +14,24 @@
                     <table class="table">
                         <thead>
                             <tr>
-                                <th scope="col">Produto</th>
-                                <th scope="col">Quantidade</th>
-                                <th scope="col">Data</th>
-                                <th scope="col">#</th>
+                                <th scope="col">Nome</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Perfil</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>Licença premium</td>
-                                <td>2</td>
-                                <td>22/05/2023</td>
-                                <td>actions</td>
-                            </tr>
-                            <tr>
-                                <td>Licença standard</td>
-                                <td>10</td>
-                                <td>22/05/2023</td>
-                                <td>actions</td>
-                            </tr>
-                            <tr>
-                                <td>Licença premium</td>
-                                <td>4</td>
-                                <td>22/05/2023</td>
-                                <td>actions</td>
-                            </tr>
+                            <?php
+                                $users = show($pdo);
+                                if (isset($users)) {
+                                    foreach ($users as $item) {
+                                        echo '<tr>
+                                            <td>'. $item['name'] .'</td>
+                                            <td>'. $item['email'] .'</td>
+                                            <td>'. $item['profile'] .'</td>
+                                        </tr>';
+                                    }
+                                }
+                            ?>
                         </tbody>
                     </table>
                 </div>
